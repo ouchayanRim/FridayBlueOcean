@@ -21,12 +21,25 @@ pipeline {
           }
         }
 
+        stage('test3') {
+          steps {
+            input(message: 'are you to deploy', ok: 'Yes I am sure')
+            echo 'Test 3 tested'
+          }
+        }
+
       }
     }
 
     stage('Deploy') {
       steps {
         echo 'Deploy Completed'
+      }
+    }
+
+    stage('Notify for new Build') {
+      steps {
+        echo 'Nex Buld Completed'
       }
     }
 
