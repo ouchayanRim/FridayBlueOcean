@@ -18,13 +18,7 @@ pipeline {
         stage('Test2 ') {
           steps {
             echo 'Test2 done'
-          }
-        }
-
-        stage('test3') {
-          steps {
-            input(message: 'are you to deploy', ok: 'Yes I am sure')
-            echo 'Test 3 tested'
+            input(message: 'yOU W to Build', ok: 'yes sure')
           }
         }
 
